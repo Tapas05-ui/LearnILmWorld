@@ -26,15 +26,12 @@ import ScrollToTop from './components/ScrollToTop'
 import Courses from './pages/Course'
 import CoursePlayer from './components/CoursePlayer'
 import FeaturedTrainersPage from './pages/FeaturedTrainersPage'
-import TrainerProfilePageDemo from './pages/TrainerProfilePageDemo'
 import GermanBlog from './pages/blogs/GermanBlog';
 import BengaliBlog from './pages/blogs/BengaliBlog';
 import VerifyEmail from './pages/VerifyEmail';
 import ScrollRestoration from './components/ScrollRestoration';
 import BlogPage from './pages/BlogPage';
 import Careers from './pages/Careers';
-import BookPrivateSession from './pages/student/BookPrivateSession';
-import BookGroupSession from './components/BookGroupSession';
 
 function App() {
   return (
@@ -84,8 +81,6 @@ function App() {
                       <StudentDashboard />
                     </PrivateRoute>
                   } />
-                  <Route path="/book/private/:trainerId" element={<BookPrivateSession />} />
-                  <Route path="/book/group/:trainerId" element={<BookGroupSession />} />
 
                   <Route path="/admin/*" element={
                     <PrivateRoute allowedRoles={['admin']}>
@@ -93,7 +88,6 @@ function App() {
                     </PrivateRoute>
                   } />
 
-                  <Route path="/trainer/profile/:id" element={<TrainerProfilePageDemo />} />
 
 
                   <Route
